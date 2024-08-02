@@ -1,16 +1,17 @@
-# Getting Started
+# Cache Service 21
 
-### Reference Documentation
-For further reference, please consider the following sections:
+Supposed to be a lib for cache.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.2/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.3.2/maven-plugin/build-image.html)
+Supposed to be installed on your Nexus on deploy stage.
 
-### Maven Parent overrides
+## Important
 
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+Java and Spring versions are important.
 
+<groupId>com.leonardo.cache</groupId>
+<artifactId>service</artifactId>
+<version>1.${java.version}.${spring-boot.version}</version>
+
+Project version takes java version and spring boot version on its complement.
+
+If a new Java comes a new deploy for it must be done, same for spring. In order to do not have deprecated code.
